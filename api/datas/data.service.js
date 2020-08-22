@@ -1,9 +1,9 @@
 const pool = require("../../config/database");
 
 module.exports = {
-  getDatas: callBack => {
+  getDatas: (sqlQuery, callBack) => {
     pool.query(
-      `select TITLE, FIRSTNAME, LASTNAME from mock_data`,
+      `select ${sqlQuery} from mock_data`,
       [],
       (error, results, fields) => {
         if (error) {
@@ -13,9 +13,9 @@ module.exports = {
       }
     );
   },
-  getDatasBypage: callBack => {
+  getDatasBypage: (sqlQuery, callBack) => {
     pool.query(
-      `select TITLE, FIRSTNAME, LASTNAME from mock_data`,
+      `select ${sqlQuery} from mock_data`,
       [],
       (error, results, fields) => {
         if (error) {
@@ -25,9 +25,9 @@ module.exports = {
       }
     );
   },
-  getUserByName: (callBack) => {
+  getUserByName: (sqlQuery, callBack) => {
     pool.query(
-      `select TITLE, FIRSTNAME, LASTNAME from mock_data`,
+      `select ${sqlQuery} from mock_data`,
       [],
       (error, results, fields) => {
         if (error) {
@@ -37,9 +37,9 @@ module.exports = {
       }
     );
   },
-  getUserByNameByPage: (callBack) => {
+  getUserByNameByPage: (sqlQuery, callBack) => {
     pool.query(
-      `select TITLE, FIRSTNAME, LASTNAME from mock_data`,
+      `select ${sqlQuery} from mock_data`,
       [],
       (error, results, fields) => {
         if (error) {
