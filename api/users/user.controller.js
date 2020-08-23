@@ -46,10 +46,11 @@ module.exports = {
         const jsontoken = sign({ result: results }, "qwe1234", {
           expiresIn: "1h"
         });
-        return res.json({
+        return res.status(200).json({
           success: 1,
           message: "login successfully",
-          token: jsontoken
+          token: jsontoken,
+          email: body.email
         });
       } else {
         return res.status(400).json({

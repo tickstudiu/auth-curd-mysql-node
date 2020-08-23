@@ -25,7 +25,7 @@ module.exports = {
       }
     );
   },
-  getUserByName: (sqlQuery, callBack) => {
+  getDatasByName: (sqlQuery, callBack) => {
     pool.query(
       `select ${sqlQuery} from mock_data`,
       [],
@@ -37,7 +37,7 @@ module.exports = {
       }
     );
   },
-  getUserByNameByPage: (sqlQuery, callBack) => {
+  getDatasByNameByPage: (sqlQuery, callBack) => {
     pool.query(
       `select ${sqlQuery} from mock_data`,
       [],
