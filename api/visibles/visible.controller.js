@@ -10,9 +10,9 @@ module.exports = {
     setVisible(body, (err, results) => {
       if (err) {
         console.log(err);
-        return res.status(400).json({
+        return res.status(200).json({
           success: 0,
-          message: "error",
+          message: "already have data or error",
         });
       }
       return res.status(200).json({

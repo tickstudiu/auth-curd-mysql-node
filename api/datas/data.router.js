@@ -4,7 +4,7 @@ const { getDatas, getDatasBypage, getDatasByName, getDatasByNameByPage } = requi
 
 router.post("/", checkToken, getDatas);
 router.post("/byPage/page/:page", checkToken, getDatasBypage);
-router.post("/byName/", checkToken, getDatasByName);
+router.post("/byName", checkToken, getDatasByName);
 router.post("/byNamebyPage/page/:page", checkToken, getDatasByNameByPage);
 
 module.exports = router;
